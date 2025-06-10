@@ -1,0 +1,18 @@
+services:
+  jarvis:
+    build: .
+    image: jarvis-1
+    container_name: jarvis-1
+    ports:
+      - "5901:5901"
+    environment:
+      - TMPDIR=/tmp
+      # .envファイルからOPENAI_API_KEYを読み込む
+      - OPENAI_API_KEY
+    volumes:
+      # STEVE-Iの重みファイルを配置したディレクトリをマウントします
+      # 例: ./weights:/weights
+      - ./weights:/weights
+    # entrypoint.shに渡す引数をここで指定できます
+    # 例: --task iron_pickaxe --timeout 10
+    command: ["--task", "iron_pickaxe"]

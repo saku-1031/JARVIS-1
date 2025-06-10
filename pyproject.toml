@@ -17,7 +17,15 @@ dependencies = [
     "gym==0.23.1",
     "attrs==23.2.0",
     "gym3==0.3.3",
-    "openai==1.16.0"
+    "openai==1.16.0",
+    "coloredlogs",
+    "psutil",
+    "daemoniker",
+    "lxml",
+    "Pyro4",
+    "xmltodict",
+    "Pillow",
+    "opencv-python"
 ]
 authors = [
     {name="CraftJarvis", email="craftjarvis@outlook.com"},
@@ -35,3 +43,6 @@ readme = {file = "README.md"}
 addopts = [
     "--import-mode=importlib",
 ]
+
+[project.optional-dependencies]
+# ... existing code ...
